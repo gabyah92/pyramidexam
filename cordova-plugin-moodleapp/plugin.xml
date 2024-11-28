@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-moodleapp" version="0.0.0">
-    <name>MoodleApp</name>
-    <description>Plugin with custom functionality for the Moodle App</description>
-    <js-module src="www/index.js" name="moodleapp">
+    <name>PyramidExam</name>
+    <description>Plugin with custom functionality for the PyramidExam App</description>
+    <js-module src="www/index.js" name="pyramidexam">
         <clobbers target="cordova.MoodleApp" />
     </js-module>
     <platform name="android">
         <framework src="com.android.installreferrer:installreferrer:2.2" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="SecureStorage">
-                <param name="android-package" value="com.moodle.moodlemobile.SecureStorage"/>
+                <param name="android-package" value="com.pyramid.pyramidexam.SecureStorage"/>
             </feature>
             <feature name="InstallReferrer">
-                <param name="android-package" value="com.moodle.moodlemobile.InstallReferrer"/>
+                <param name="android-package" value="com.pyramid.pyramidexam.InstallReferrer"/>
             </feature>
         </config-file>
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Diagnostic">
-                <param name="android-package" value="com.moodle.moodlemobile.Diagnostic"/>
+                <param name="android-package" value="com.pyramid.pyramidexam.Diagnostic"/>
                 <param name="onload" value="true" />
             </feature>
             <feature name="Diagnostic_Location">
-                <param name="android-package" value="com.moodle.moodlemobile.Diagnostic_Location"/>
+                <param name="android-package" value="com.pyramid.pyramidexam.Diagnostic_Location"/>
                 <param name="onload" value="true" />
             </feature>
         </config-file>
@@ -35,8 +35,8 @@
         <framework src="androidx.legacy:legacy-support-v4:$ANDROIDX_VERSION" />
         <framework src="androidx.appcompat:appcompat:$ANDROIDX_APPCOMPAT_VERSION" />
 
-        <source-file src="src/android/SecureStorage.java" target-dir="src/com/moodle/moodlemobile" />
-        <source-file src="src/android/InstallReferrer.java" target-dir="src/com/moodle/moodlemobile" />
+        <source-file src="src/android/SecureStorage.java" target-dir="src/com/pyramid/pyramidexam" />
+        <source-file src="src/android/InstallReferrer.java" target-dir="src/com/pyramid/pyramidexam" />
     </platform>
 
     <platform name="ios">

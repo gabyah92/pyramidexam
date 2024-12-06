@@ -1,8 +1,8 @@
 {
-    "app_id": "com.pyramid.pyramidexam",
-    "appname": "PyramidExam",
+    "app_id": "com.moodle.moodlemobile",
+    "appname": "Moodle Mobile",
     "versioncode": 50000,
-    "versionname": "1.0.0",
+    "versionname": "5.0.0",
     "cache_update_frequency_usually": 420000,
     "cache_update_frequency_often": 1200000,
     "cache_update_frequency_sometimes": 3600000,
@@ -68,8 +68,18 @@
         "zh-tw": "正體中文"
     },
     "wsservice": "moodle_mobile_app",
-    "gcmpn": "pyramidexam",
-    "siteUrl": "https://pyramidexam.in/",
+    "demo_sites": {
+        "student": {
+            "url": "https://school.moodledemo.net",
+            "username": "student",
+            "password": "moodle2024"
+        },
+        "teacher": {
+            "url": "https://school.moodledemo.net",
+            "username": "teacher",
+            "password": "moodle2024"
+        }
+    },
     "defaultZoomLevel": "none",
     "zoomlevels": {
         "none": 100,
@@ -77,20 +87,20 @@
         "high": 120
     },
     "customurlscheme": "moodlemobile",
-    "sites": [{"name":"PyramidExam", "alias":"PyramidExam","url":"https://pyramidexam.in", "staging":false}],
+    "sites": [],
     "multisitesdisplay": "",
     "sitefindersettings": {},
-    "onlyallowlistedsites": true,
+    "onlyallowlistedsites": false,
     "forcedefaultlanguage": false,
     "privacypolicy": "https://moodle.net/moodle-app-privacy/",
     "notificoncolor": "#f98012",
     "enableanalytics": false,
-    "enableonboarding": false,
+    "enableonboarding": true,
     "forceColorScheme": "",
     "forceLoginLogo": false,
     "ioswebviewscheme": "moodleappfs",
     "appstores": {
-        "android": "com.pyramid.pyramidexam",
+        "android": "com.moodle.moodlemobile",
         "ios": "id633359593"
     },
     "wsrequestqueuelimit": 10,

@@ -12,12 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.pyramid.pyramidexam;
+package com.moodle.moodlemobile;
 
 /*
  * Imports
  */
-
 import static android.content.Context.BATTERY_SERVICE;
 
 import java.io.BufferedReader;

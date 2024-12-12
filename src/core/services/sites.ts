@@ -286,10 +286,10 @@ export class CoreSitesProvider {
         siteUrl = CoreUrl.formatURL(siteUrl);
 
         if (!CoreUrl.isHttpURL(siteUrl)) {
-            throw new CoreError(Translate.instant('core.login.invalidsite'), {
+            throw new CoreError(Translate.instant('core.login.invalidsite'), { debug: {
                 code: 'invalidprotocol',
                 details: `URL contains an invalid protocol when checking site.<br><br>Origin: ${origin}.<br><br>URL: ${siteUrl}.`,
-            });
+            } });
         }
 
         if (!CoreNetwork.isOnline()) {
@@ -807,7 +807,9 @@ export class CoreSitesProvider {
      * @returns Either VALID_VERSION, WORKPLACE_APP or MOODLE_APP.
      */
     protected validateWorkplaceVersion(info: CoreSiteInfoResponse): number {
-        const isWorkplace = !!info.functions && info.functions.some((func) => func.name == 'tool_program_get_user_programs');
+        const isWorkplace = !!info.functions && info.functions.some((func) =>
+            func.name === 'tool_program_get_user_programs' ||
+            func.name === 'tool_catalogue_get_user_catalogue');
 
         const isWPEnabled = this.isWorkplaceEnabled();
 

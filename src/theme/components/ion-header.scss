@@ -69,20 +69,12 @@ ion-header.header-md {
             display: inline !important;
         }
 
-        h1 {
-            .core-header-logo {
-                max-height: var(--core-mainpage-headerlogo-maxheight);
-                display: var( --core-mainpage-headerlogo-display);
-            }
-
-            .core-header-sitename {
-                display: var(--core-mainpage-sitename-display);
-            }
+        h1 core-site-logo {
+            --core-site-logo-max-height: var(--core-mainpage-headerlogo-maxheight);
         }
 
         h1, h2, .subheading {
-            font-size: var(--mdl-typography-label-lineHeight-lg);
-            font-weight: 500;
+            font: var(--mdl-typography-heading4-font);
             letter-spacing: .0125em;
             text-align: start;
             padding: 0;
